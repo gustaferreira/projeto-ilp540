@@ -1,10 +1,5 @@
-# projeto-ilp540
+# smak-em-processo
+um pouco mais sobre o projeto smak
 
-Projeto diciplina ILP540 - Fatec Presidente Prudente
+fiz esse projeto para treinar meus conhecimentos em html e css puro
 
-## Detalhes do Projeto:
-
-
-
-## Link do Projeto:
-https://app.moqups.com/pGsOluC9XUKIdZuVaVTNtU20LfhFfgsX/view/page/a45c1e27f

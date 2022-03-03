@@ -40,7 +40,7 @@ nav li{
     margin: 0 0 0 2.2rem ;
 }
 
-nav a{
+.titulos-nav{
     text-decoration: none;
     font-size:1.5rem;
     color: white;
@@ -151,7 +151,7 @@ form #twiter{
     margin-right: 1rem;
     padding: 0.4rem;
     cursor: pointer;
-    width: 32%;
+    width: 100%;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 7px;
@@ -166,10 +166,9 @@ form #twiter:hover{
 }
 
 form #face{
-    margin-right: 1rem;
     padding: 0.4rem;
     cursor: pointer;
-    width: 32%;
+    width: 100%;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 7px;
@@ -183,22 +182,6 @@ form #face:hover{
     background-color: rgb(97, 149, 184);
 }
 
-form #insta{
-    padding: 0.4rem;
-    cursor: pointer;
-    width: 32%;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-radius: 7px;
-    border: none;
-    color: white;
-    background: linear-gradient(90deg,rgb(13, 26, 211),rgb(253, 11, 213),rgb(248, 244, 0),rgb(245, 3, 3),rgb(253, 11, 213));
-    transition: 0.8s;
-}
-
-form #insta:hover{
-    background-color: rgb(255, 238, 0);
-}
 
 .outros{
     position: relative;

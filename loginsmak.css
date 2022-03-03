@@ -151,7 +151,7 @@ form #twiter{
     margin-right: 1rem;
     padding: 0.4rem;
     cursor: pointer;
-    width: 32%;
+    width: 100%;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 7px;
@@ -166,10 +166,9 @@ form #twiter:hover{
 }
 
 form #face{
-    margin-right: 1rem;
     padding: 0.4rem;
     cursor: pointer;
-    width: 32%;
+    width: 100%;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 7px;
