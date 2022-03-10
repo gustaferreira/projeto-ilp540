@@ -10,12 +10,6 @@ body{
     background-color: #a60404 ;
 }
 
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 header{
     width: 100%;
     background-color: #a60404 ;
@@ -40,7 +34,7 @@ nav li{
     margin: 0 0 0 2.2rem ;
 }
 
-.titulos-nav{
+nav a{
     text-decoration: none;
     font-size:1.5rem;
     color: white;
@@ -55,11 +49,11 @@ h1 img{
     margin-top: 6rem;
 }
 
+
 .container{
     margin-top: 5rem;
     background-color: rgb(255, 255, 255) ;
-    width: 50%;
-    min-height: 40vh;
+    width: 50%px;
     padding: 3rem;
     border-radius: 25px;
 }
@@ -83,6 +77,7 @@ main h2::before{
 
 .formulario{
     position: relative;
+    margin-bottom: 1.2rem;
 }
 
 .formulario input{
