@@ -2,16 +2,9 @@
 
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins";
 }
 
-body{
-    width: 100%;
-    height: 100%;
-}
 
 header{
     width: 100%;
@@ -47,11 +40,12 @@ nav a:hover{
 }
 
 
+
 .galeria{
     width: 100%;
-    height: 500px;
     position: relative;
     overflow:hidden;
+    min-height: 500px;
 }
 
 .foto{
@@ -90,45 +84,26 @@ nav a:hover{
 
 }
 
-.mapa{
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
 .mapinha{
     width: 100%;
 }
 
-.icones{
+.caixa-icones{
     display: flex;
-}
-
-.icones ul{
-    display: flex;
-    text-decoration: none;
-    margin: auto;
-}
-
-.icones li{
-    padding: 2rem 5rem;
-    list-style: none;
+    justify-content: center;
+    font-size: 1.9rem;
     text-align: center;
+    padding: 2rem;
 }
 
-.icones i{
-    display: inline-block;
-    font-size: 3rem;
+.caixa-icones div{
+    margin: 0 55px;
+}
+.caixa-icones i{
+    font-size: 2.8rem;
     color: #a60404;
 }
 
-.icones span{
-    font-size: 2rem;
-}
-
-.icones li p{
-    font-size: 1.5rem;
-}
 
 
 .historia-smak{
@@ -138,12 +113,13 @@ nav a:hover{
 }
 
 .sobre{
+    width: auto;
     margin: auto;
-    width: 50%;
     padding: 2rem;
 }
 
 .sobre p{
+    font-size: auto;
     font-weight: 400;
     padding: 0.8rem 0;
 }
@@ -178,7 +154,6 @@ nav a:hover{
 }
 
 .formulario input{
-    width: 35%;
     height: 3rem;
     outline: none;
     border: none;
@@ -191,7 +166,6 @@ nav a:hover{
 }
 
 .formulario button{
-    width: 15%;
     height: 3rem;
     border: none;
     padding: 0 0.3rem;
@@ -236,14 +210,10 @@ nav a:hover{
     padding-bottom: 1.2rem;
 }
 
-.texto-contato{
-    width: 100%;
-    display: flex;
-}
 
 .texto1{
     position: relative;
-    margin: auto;
+    margin: 0 auto;
     padding: 2rem 0;
 }
 
@@ -285,10 +255,15 @@ footer .texto-direitos-reservados{
     font-size: bold;
     color: #ffffff;
     text-align: center;
-    transition: ease-in-out 0.2s;
+
 }
 
-@media (max-width: 725px){
+
+@media (max-width: 760px){
+
+    .galeria{
+        display: none;
+    }
     .menu{
         display: flex;
         flex-direction: column;
@@ -300,4 +275,34 @@ footer .texto-direitos-reservados{
     nav li:first-child{
         margin:0;
     }
+}
+
+@media (max-width: 500px){
+    .secao-fale-conosco h2{
+        font-size: 1.2rem;
+    }
+    
+    .formulario{
+        display: flex;
+    }
+
+    .sobre h1{
+        font-size: 1.5rem;
+    }
+    
+    .caixa-icones i{
+        font-size: 1.5rem;
+        color: #a60404;
+    }
+    .caixa-icones div p{
+        font-size: 1rem;
+    }
+    .caixa-icones{
+        padding: 0;
+    }
+    .caixa-icones div{
+        padding: 0;
+        margin-top: 15px 0;
+    }
+
 }
