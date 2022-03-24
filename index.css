@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -19,15 +20,12 @@ header{
 }
 
 .menu{
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-}
-
-nav{
-    position: absolute;
-    top: 140px;
-    right: 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    height: 300px;
 }
 
 nav li{
@@ -45,17 +43,15 @@ nav a{
 
 nav a:hover{
     color: black;
+    text-decoration: none;
 }
 
-h1 img{
-    margin-top: 6rem;
-}
 
 .galeria{
     width: 100%;
     height: 500px;
     position: relative;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .foto{
@@ -279,3 +275,29 @@ h1 img{
 .texto1 .p2{
     padding: 0.9rem 0;
 } 
+
+#caixa-direitos-reservados{
+    background-color:#000000;
+}
+
+footer .texto-direitos-reservados{
+    margin-bottom: 0;
+    font-size: bold;
+    color: #ffffff;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+}
+
+@media (max-width: 725px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        width: max-content;
+    }
+
+    nav li:first-child{
+        margin:0;
+    }
+}

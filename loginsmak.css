@@ -23,15 +23,12 @@ header{
 }
 
 .menu{
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-}
-
-nav{
-    position: absolute;
-    top: 140px;
-    right: 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    height: 300px;
 }
 
 nav li{
@@ -48,6 +45,7 @@ nav a{
 }
 
 nav a:hover{
+    text-decoration: none;
     color: black;
 }
 
@@ -56,9 +54,8 @@ h1 img{
 }
 
 .container{
-    margin-top: 5rem;
     background-color: rgb(255, 255, 255) ;
-    width: 50%;
+    width: 50%px;
     min-height: 40vh;
     padding: 3rem;
     border-radius: 25px;
@@ -233,8 +230,13 @@ form #insta:hover{
     text-decoration: none;
 }
 
+footer{
+    background-color:#000000;
+    margin-top: 3rem;
+}
+
 footer p{
-    padding: 5rem;
+    margin-bottom: 0;
     font-size: bold;
     color: #ffffff;
     text-align: center;
@@ -244,4 +246,18 @@ footer p{
 footer p:hover{
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+@media (max-width: 725px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        width: max-content;
+    }
+
+    nav li:first-child{
+        margin:0;
+    }
 }
