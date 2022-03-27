@@ -264,16 +264,8 @@ footer .texto-direitos-reservados{
     .galeria{
         display: none;
     }
-    .menu{
-        display: flex;
-        flex-direction: column;
-    }
-    nav{
-        width: max-content;
-    }
-
-    nav li:first-child{
-        margin:0;
+    img{
+        width: 230px;
     }
 }
 

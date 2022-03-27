@@ -6,6 +6,11 @@
 body{
     background-color: #a60404 ;
 }
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 header{
     width: 100%;
@@ -223,17 +228,9 @@ footer p:hover{
     letter-spacing: 1px;
     cursor: pointer;
 }
-
 @media (max-width: 760px){
-    .menu{
-        display: flex;
-        flex-direction: column;
-    }
-    #navegacao{
-        width: max-content;
-    }
 
-    nav li:first-child{
-        margin:0;
+    img{
+        width: 230px;
     }
 }

@@ -228,11 +228,12 @@ form #insta:hover{
     text-decoration: none;
 }
 
-footer{
+.text-direitos{
     background-color:#000000;
+    margin-top: 3rem;
 }
 
-footer p{
+.text-direitos p{
     margin-bottom: 0;
     font-size: bold;
     color: #ffffff;
@@ -240,21 +241,14 @@ footer p{
     transition: ease-in-out 0.2s;
 }
 
-footer p:hover{
+.text-direitos p:hover{
     letter-spacing: 1px;
     cursor: pointer;
 }
 
 @media (max-width: 760px){
-    .menu{
-        display: flex;
-        flex-direction: column;
-    }
-    nav{
-        width: max-content;
+    img{
+        width: 230px;
     }
 
-    nav li:first-child{
-        margin:0;
-    }
 }
