@@ -88,23 +88,36 @@ nav a:hover{
     width: 100%;
 }
 
-.caixa-icones{
+.icones{
     display: flex;
-    justify-content: center;
-    font-size: 1.9rem;
-    text-align: center;
-    padding: 2rem;
 }
 
-.caixa-icones div{
-    margin: 0 55px;
+.icones ul{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: auto;
 }
-.caixa-icones i{
-    font-size: 2.8rem;
+
+.icones li{
+    padding: 2rem;
+    list-style: none;
+    text-align: center;
+}
+
+.icones i{
+    display: inline-block;
+    font-size: 3rem;
     color: #a60404;
 }
 
+.icones span{
+    font-size: 2rem;
+}
 
+.icones li p{
+    font-size: 1.5rem;
+}
 
 .historia-smak{
     text-align: justify;
@@ -257,7 +270,6 @@ footer .texto-direitos-reservados{
     text-align: center;
 
 }
-
 
 @media (max-width: 760px){
 

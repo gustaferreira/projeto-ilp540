@@ -53,7 +53,7 @@ h1 img{
 
 .container{
     background-color: rgb(255, 255, 255) ;
-    padding: 3rem;
+    padding: 3.5rem;
     border-radius: 25px;
 }
 
@@ -75,33 +75,18 @@ main h2::before{
 }
 
 .formulario{
-    position: relative;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .formulario input{
     width: 100%;
+    border-width: 0 0 2px;
+    border-color: rgb(85, 85, 85);
     outline: none;
     font-size: 1rem;
-    padding: 8px;
+    padding: 15px;
     transition: 1s;
-    border: none;
 }
-
-.formulario::before{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width:100% ;
-    bottom: 3px;
-    background: rgb(0, 0, 0, 0.5);
-}
-
-
-.formulario:first-child{
-    margin-bottom: 1.5rem;
-}
-
 
 input::placeholder{
     opacity: 0.5;
@@ -119,6 +104,7 @@ form{
     margin-top: 1rem;
 
 }
+
 
 form #entrar{
     margin-top: 1rem;
@@ -141,7 +127,7 @@ form #entrar:hover{
 }
 
 
-form #twiter{
+form #google{
     margin-right: 1rem;
     padding: 0.4rem;
     cursor: pointer;
@@ -150,13 +136,13 @@ form #twiter{
     font-weight: bold;
     border-radius: 7px;
     border: none;
-    color: white;
-    background-color:rgb(6, 167, 216) ;
+    color: rgb(255, 255, 255);
+    background-color: rgb(177, 177, 177);
     transition: 0.8s;
 }
 
-form #twiter:hover{
-    background-color: rgb(97, 149, 184);
+form #google:hover{
+    opacity: 0.8;
 }
 
 form #face{
@@ -173,7 +159,7 @@ form #face{
 }
 
 form #face:hover{
-    background-color: rgb(97, 149, 184);
+   opacity: 0.8;
 }
 
 
