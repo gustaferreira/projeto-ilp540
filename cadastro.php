@@ -78,7 +78,7 @@
                     </button>
                 </div>
                     <div class="registrar">
-                        <span>Já possui uma conta? <a href="loginsmak.html">Login</a></span>
+                        <span>Já possui uma conta? <a href="loginsmak.php">Login</a></span>
                     </div>
             </form>
         </div>

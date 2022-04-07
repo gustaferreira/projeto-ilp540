@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        
         <div id="navegacao" class="menu">
             <figure><img src="img/logosmak.png" alt="logo smak" title="logo smak"></figure>
                 <nav class="navbar navbar-expand-md navbar-dark">

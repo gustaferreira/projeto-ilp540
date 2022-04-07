@@ -32,7 +32,7 @@
     <main>
         <div id="login" class="container">
         <h2>Login</h2>
-        <form action="#" method="post" class="needs-validation" novalidate>
+        <form action="process_login" method="post" class="needs-validation" novalidate>
             <div class="formulario form-row">
                 <input class="form-control" type="email" name="email" id="email" placeholder="Example@hotmail.com" required>
                 <div class="invalid-feedback">

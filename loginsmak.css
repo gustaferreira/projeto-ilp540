@@ -53,9 +53,10 @@ h1 img{
 }
 
 .container{
-    background-color: rgb(255, 255, 255) ;
+    background-color: rgb(233, 230, 230);
     padding: 3rem;
     border-radius: 25px;
+    box-shadow:5px 5px 30px black;
 }
 
 main h2{
