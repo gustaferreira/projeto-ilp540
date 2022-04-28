@@ -1,3 +1,13 @@
+<?php
+    $login = $senha = $check = "";
+    if(isset($_COOKIE["login"])){
+        $login = $_COOKIE["login"];
+        $check = "checked";
+    }
+    if(isset($_COOKIE["senha"])){
+        $senha = $_COOKIE["senha"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,19 +42,22 @@
     <main>
         <div id="login" class="container">
         <h2>Login</h2>
-        <form action="process_login" method="post" class="needs-validation" novalidate>
+        <form action="process_login.php" method="post" class="needs-validation" novalidate>
             <div class="formulario form-row">
-                <input class="form-control" type="email" name="email" id="email" placeholder="Example@hotmail.com" required>
+                <input class="form-control" type="email" name="login" id="login" placeholder="Example@hotmail.com"  value="<?= $login ?>">
                 <div class="invalid-feedback">
                     Campo inválido ou usuário não existe!
                 </div>
             </div>
             
             <div class="formulario form-row">
-                <input class="form-control" type="password" name="password" id="password" placeholder="Enter password.." required>
+                <input class="form-control" type="password" name="senha" id="senha" placeholder="Enter password.." value="<?= $senha ?>">
                 <div class="invalid-feedback">
                     Senha incorreta!
                 </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="salvar" <?= $check ?>>Salvar dados de acesso
             </div>
             
             <input id="entrar" type="submit" value="Entrar">

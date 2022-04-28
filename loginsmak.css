@@ -99,6 +99,9 @@ form{
     flex-direction: column;
 }
 
+.checkbox{
+    margin: 1rem;
+}
 
 .botoes{
     display: flex;

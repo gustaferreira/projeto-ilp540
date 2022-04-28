@@ -2,7 +2,7 @@
 
 
 *{
-    font-family: "Poppins";
+    font-family: "Poppins", "sans-serif";
 }
 
 
@@ -40,62 +40,101 @@ nav a:hover{
     text-decoration: none;
 }
 
-.container{
-    background-color: rgb(255, 255, 255) ;
-    padding: 3rem;
-    border-radius: 25px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.formulario{
-    margin-top: 2rem;
-}
-
-.botoes{
+.produtos {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-
+    margin: 0 auto;
+    padding: 50px 0;
 }
 
-.formulario input{
-    width: 100%;
-    border-width: 0 0 2px;
-    border-color: rgb(85, 85, 85);
-    outline: none;
-    font-size: 1rem;
-    padding: 15px;
-    transition: 1s;
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.produtos li:hover {
+    border-color: #a60404;
+    color: #a60404;
+}
+.produtos li:active {
+    border-color: #088C19;    
+}
+.produtos li:hover h2 {
+    font-size: 34px;
 }
 
-input::placeholder{
-    opacity: 0.5;
-}
-
-
-
-#button{
-    box-shadow:5px 5px 30px black;
-    margin-top: 2rem;
-    padding: 1.5rem;
-    cursor: pointer;
-    width: 60%;
-    font-size: 2rem;
+.produtos h2 {
+    font-size: 30px;
     font-weight: bold;
-    border-radius: 16px;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text-direitos{
+    background-color:#000000;
+    margin-top: 3rem;
+}
+
+button{
+    background-color: #a60404;
+    padding: 1.2rem;
+    color: #ffffff;
     border: none;
-    color: black;
-    background-color:rgb(202, 247, 1) ;
-    transition: 0.3s;
+    border-radius: 15px;
+    width: 80%;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1.2rem;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.mapinha{
+    width: 100%;
+}
+
+.text-direitos p{
+    margin-bottom: 0;
+    font-size: bold;
+    color: #ffffff;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+}
+
+.text-direitos p:hover{
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 @media (max-width: 760px){
     img{
         width: 230px;
+    }
+}
+
+@media (max-width: 960px){
+    .produtos li{
+        margin-top: 2rem;
+    }
+
+    .produtos{
+        flex-direction: column;
     }
 }

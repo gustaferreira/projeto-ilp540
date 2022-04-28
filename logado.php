@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,9 +22,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -31,31 +33,38 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="formulario">
-                <input type="name" name="name" id="name" placeholder="Digite o nome...">
-            </div>
-            <div class="formulario">
-                <input id="url" type="text" placeholder="Digite a URL...">
-            </div>
-            <div class="botoes">
-                <button id="button">ENVIAR</button>
-            </div>
-        </div>
+        <ul class="produtos">
+                <li>
+                    <h2>Crepe de Nutella</h2>
+                    <img src="https://cozinhasimples.com.br/wp-content/uploads/massa-basica-para-crepe-cozinha-simples-250x250.jpg">
+                    <p class="produto-descricao">Crepe recheado de Nutella, muito mesmo :)</p>
+                    <p class="produto-preco">R$ 10,00</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <h2>Crepe de Frango</h2>
+                    <img src="https://cozinhasimples.com.br/wp-content/uploads/massa-basica-para-crepe-cozinha-simples-250x250.jpg">
+                    <p class="produto-descricao">Crepe recheado de Frango desfiado</p>
+                    <p class="produto-preco">R$ 8,00</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <h2>Crepe de Queijo</h2>
+                    <img src="https://cozinhasimples.com.br/wp-content/uploads/massa-basica-para-crepe-cozinha-simples-250x250.jpg">
+                    <p class="produto-descricao">Crepe recheado de Queijo, muito mesmo :)</p>
+                    <p class="produto-preco">R$ 6,00</p>
+                    <button>Comprar</button>
+                </li>
+        </ul>
     </main>
-        <script>
-            var button = document.getElementById('button')
-
-             button.addEventListener('click',function(event){
-                var imageurl = document.getElementById('url').value
-
-                var img = document.createElement('img')
-
-                img.src = imageurl
-
-                document.body.appendChild(img)
-            })
-        </script>
+    <footer>
+        <div class="mapa">
+            <iframe class="mapinha" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.946301577018!2d-51.50914006932323!3d-22.278498364205692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94938deb94d0a277%3A0xc1a0a445d489216c!2sPirapozinho%2C%20SP%2C%2019200-000!5e0!3m2!1spt-BR!2sbr!4v1621446284188!5m2!1spt-BR!2sbr" height="450" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="text-direitos">
+            <p>Todos os direitos reservados Gustavo Ferreira &copy;</p>
+        </div>
+    </footer>
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
