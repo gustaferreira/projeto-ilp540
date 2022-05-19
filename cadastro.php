@@ -1,3 +1,42 @@
+<?php
+include("conecta.php");
+
+if(!isset($_SESSION)) session_start();
+
+if(isset($_SESSION["id_usuario"])){
+
+	$aux = "disabled";
+
+	$id = $_SESSION["id_usuario"];
+
+	try {
+	
+		$sql = "SELECT * FROM `usuarios` WHERE `id` = '$id'";
+		
+		$res = $conn->query($sql)->fetchAll();
+
+		if(count($res) > 0) {
+	        foreach ($res as $row) {
+	            $email = $row['email'];
+	            $nome = $row['nome'];
+	            $telefone = $row['telefone'];
+	            $senha = $row['senha'];
+	        }
+	       
+    	}	
+	} catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+}
+else{
+	$nome = "";
+	$email = "";
+	$telefone = "";
+	$senha = "";
+	$aux = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,8 +61,22 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        <?php  
+                            if(isset($_SESSION["id_usuario"])){
+
+                                $aux = "disabled";
+                                        
+                                $id = $_SESSION["id_usuario"];
+
+                                echo ("<li class='nav-item'><a class='nav-link' href='cadastro.php'><i class='fas fa-user'></i></a></li>");
+                                } else{
+                                    echo ("<li class='nav-item'><a class='nav-link' href='loginsmak.php'><i class='fas fa-user'></i></a></li>");
+                                }
+
+                        ?>
+                        
+                        
+                        <li class="nav-item"><a class="nav-link" href="logado.php"><i class="fas fa-shopping-cart"></i></a></li>
                         </ul>
                     </div>
                     </div>
@@ -32,40 +85,52 @@
     </header>
     <main>
         <div id="cadastro" class="container">
-            <h2>Cadastro</h2>
-            <form action="#" method="post" class="needs-validation" novalidate>
+        <?php  
+                if(isset($_SESSION["id_usuario"])){
+
+                    $aux = "disabled";
+                            
+                    $id = $_SESSION["id_usuario"];
+
+                    echo ("<h2>Alterar Cadastro</h2>");
+                    } else{
+                        echo ("<h2>Cadastro</h2>");
+                    }
+
+            ?>
+            <form action="process_cadastrar.php" method="post" class="needs-validation">
                 <div class="formulario form-row">
-                    <input class="form-control" type="email" name="email" id="email" placeholder="Example@hotmail.com" required>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Example@hotmail.com" value="<?=$email?>" <?=$aux?> required>
                     <div class="invalid-feedback">
                         Campo inválido! Corrija para seguir
                     </div>
                 </div>
                 <div class="formulario form-row">
-                    <input class="form-control" type="name" name="name" id="name" placeholder="Nome.." required>
+                    <input class="form-control" type="name" name="nome" id="nome" placeholder="Nome.." value="<?=$nome?>" required>
                     <div class="invalid-feedback">
                         Campo inválido! Corrija para seguir
                     </div>
                 </div>
                 <div class="formulario form-row">
-                    <input class="form-control" type="tel" name="tel" id="tel" placeholder="(18) 8 8888-8888" required>
+                    <input class="form-control" type="tel" name="telefone" id="telefone" placeholder="(18) 8 8888-8888" value="<?=$telefone?>"required>
                     <div class="invalid-feedback">
                         Campo inválido! Corrija para seguir
                     </div>
                 </div>
                 <div class="formulario form-row">
-                    <input class="form-control" type="password" name="password" id="password" placeholder="Enter password.." required>
+                    <input class="form-control" type="password" name="senha" id="senha" placeholder="Enter password.." value="<?=$senha?>"required>
                     <div class="invalid-feedback">
-                        As senhas não conferem ou está inválida!
+                        As senhas não conferem!
                     </div>
                 </div>
                 <div class="formulario form-row">
-                    <input class="form-control" type="password" name="password" id="confirm-password" placeholder="Confirm password.." required>
+                    <input class="form-control" type="password" name="confirm_senha" id="confirm_senha" placeholder="Confirm password.." value="<?=$senha?>"required>
                     <div class="invalid-feedback">
-                        As senhas não conferem ou está inválida!
+                        As senhas não conferem!
                     </div>
                 </div>
                 
-                <input id="entrar" type="submit" value="Entrar">
+                <input id="entrar" type="submit" value="Registrar">
                 <div class="outros">
                     <span>OR</span>
                 </div>
@@ -77,8 +142,20 @@
                         <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
                     </button>
                 </div>
-                    <div class="registrar">
-                        <span>Já possui uma conta? <a href="loginsmak.php">Login</a></span>
+                    <div class="registrar text-excluir-conta">
+                        <?php  
+                            if(isset($_SESSION["id_usuario"])){
+
+                                $aux = "disabled";
+                            
+                                $id = $_SESSION["id_usuario"];
+
+                                echo ("<div class='registrar'> <span><a href='excluir.php?id=$id'>Excluir a conta</span></div>");
+                            } else{
+                                echo ("<div class='registrar'> <span>Já possui uma conta? <a href='loginsmak.php'>Login</a></span> </div>");
+                            }
+
+                        ?>
                     </div>
             </form>
         </div>

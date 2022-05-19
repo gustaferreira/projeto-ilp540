@@ -1,4 +1,6 @@
-
+<?php
+    include("autentica.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,8 +25,8 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="cadastro.php"><i class="fas fa-user"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="logado.php"><i class="fas fa-shopping-cart"></i></a></li>
                             <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
                         </ul>
                     </div>

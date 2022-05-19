@@ -1,24 +1,49 @@
 <?php
-$login = $_POST["login"];
+include("conecta.php");
+
+$email = $_POST["email"];
 $senha = $_POST["senha"];
-if(isset($_POST["salvar"])){
-        setcookie("login", $login);
-        setcookie("senha" ,$senha);
-}
-else{
-        setcookie("login", $login, time() - 1);
-        setcookie("senha", $senha, time() - 1);
+
+
+try {
+	
+	$sql = "SELECT * FROM `usuarios` WHERE `email` = '$email' AND `senha` = '$senha'";
+	
+	$res = $conn->query($sql)->fetchAll();
+
+	if(count($res) > 0) {
+        foreach ($res as $row) {
+            $id = $row['id'];
+        }
+        
+	    if(isset($_POST["salvar"])){
+			setcookie("email",$email);
+			setcookie("senha",$senha);
+		}
+		else{
+			setcookie("email",$email,time()-1);
+			setcookie("senha",$senha,time()-1);
+		}
+
+		if(!isset($_SESSION)) 
+			session_start();
+		
+		$_SESSION["id_usuario"] = $id;
+		
+		header("Location:logado.php");
+    }
+  	
+  	else {
+        header("Location:loginsmak.php");
+
+                   
 }
 
-        
-if ($login == "admin@admin" && $senha == "123"){
-        
-        if(!isset($_SESSION))
-                session_start();
-        $_SESSION["logado"] = true;
-        header("Location: logado.php");
-        }
-        else{
-               header("Location: loginsmak.php");
-        }     
+} catch(PDOException $e) {
+	echo $sql . "<br>" . $e->getMessage();
+}
+$conn = null;
+
+
+    
 ?>

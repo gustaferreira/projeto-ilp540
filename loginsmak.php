@@ -1,7 +1,7 @@
 <?php
-    $login = $senha = $check = "";
-    if(isset($_COOKIE["login"])){
-        $login = $_COOKIE["login"];
+    $email = $senha = $check = "";
+    if(isset($_COOKIE["email"])){
+        $email = $_COOKIE["email"];
         $check = "checked";
     }
     if(isset($_COOKIE["senha"])){
@@ -32,7 +32,7 @@
                         <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="logado.php"><i class="fas fa-shopping-cart"></i></a></li>
                         </ul>
                     </div>
                     </div>
@@ -43,8 +43,9 @@
         <div id="login" class="container">
         <h2>Login</h2>
         <form action="process_login.php" method="post" class="needs-validation" novalidate>
+            
             <div class="formulario form-row">
-                <input class="form-control" type="email" name="login" id="login" placeholder="Example@hotmail.com"  value="<?= $login ?>">
+                <input class="form-control" type="email" name="email" id="email" placeholder="Example@hotmail.com"  value="<?= $email ?>">
                 <div class="invalid-feedback">
                     Campo inválido ou usuário não existe!
                 </div>
@@ -56,27 +57,28 @@
                     Senha incorreta!
                 </div>
             </div>
+
             <div class="checkbox">
                 <input type="checkbox" name="salvar" <?= $check ?>>Salvar dados de acesso
             </div>
             
             <input id="entrar" type="submit" value="Entrar">
+
             <div class="outros">
                 <span>OR</span>
             </div>
                 <div class="botoes">
-                        <button id="google" type="button">
-                            <i class="fab fa-google" style="font-size: 1.5rem;"></i>
-                        </button>
-                        <button id="face" type="button">
-                            <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
-                        </button>
+                    <button id="google" type="button">
+                        <i class="fab fa-google" style="font-size: 1.5rem;"></i>
+                    </button>
+                    <button id="face" type="button">
+                        <i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i>
+                    </button>
                 </div>
                     <div class="registrar">
                         <span>Precisando de uma conta? <a href="cadastro.php">Registre-se</a></span>
                     </div>
-            </form>
-    </div>
+        </form>
     </main>
     <footer class="text-direitos">
         <p>Todos os direitos reservados Gustavo Ferreira &copy;</p>

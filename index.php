@@ -1,3 +1,12 @@
+<?php
+include("conecta.php");
+
+if(!isset($_SESSION)) session_start();
+
+if(isset($_SESSION["id_usuario"])){
+    $id = $_SESSION["id_usuario"];
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,9 +31,24 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="loginsmak.php"><i class="fas fa-user"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>                   
+                        <?php  
+                            if(isset($_SESSION["id_usuario"])){
+
+                                $aux = "disabled";
+                                        
+                                $id = $_SESSION["id_usuario"];
+
+                                echo ("<li class='nav-item'><a class='nav-link' href='cadastro.php'><i class='fas fa-user'></i></a></li>");
+                                } else{
+                                    echo ("<li class='nav-item'><a class='nav-link' href='loginsmak.php'><i class='fas fa-user'></i></a></li>");
+                                }
+
+                        ?>
+                        
+                        
+                        <li class="nav-item"><a class="nav-link" href="logado.php"><i class="fas fa-shopping-cart"></i></a></li>
+                        
                         </ul>
                     </div>
                     </div>

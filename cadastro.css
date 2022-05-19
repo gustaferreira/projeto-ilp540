@@ -197,6 +197,11 @@ form #face:hover{
     text-decoration: none;
 }
 
+.text-excluir-conta{
+    color: red;
+    text-decoration: none;
+}
+
 footer{
     background-color:#000000;
     margin-top: 3rem;
