@@ -1,5 +1,7 @@
 <?php
     include("autentica.php");
+    $nome = $_SESSION["nome"];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,9 +27,9 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cadastro.php"><i class="fas fa-user"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="cadastro.php">Olá, <?=$nome?> </a></li>
                             <li class="nav-item"><a class="nav-link" href="logado.php"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fas fa-arrow-right"></i></a></li>
                         </ul>
                     </div>
                 </div>

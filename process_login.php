@@ -14,6 +14,7 @@ try {
 	if(count($res) > 0) {
         foreach ($res as $row) {
             $id = $row['id'];
+			$nome = $row['nome'];
         }
         
 	    if(isset($_POST["salvar"])){
@@ -29,7 +30,8 @@ try {
 			session_start();
 		
 		$_SESSION["id_usuario"] = $id;
-		
+		$_SESSION["nome"] = $nome;
+
 		header("Location:logado.php");
     }
   	

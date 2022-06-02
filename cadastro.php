@@ -3,6 +3,7 @@ include("conecta.php");
 
 if(!isset($_SESSION)) session_start();
 
+
 if(isset($_SESSION["id_usuario"])){
 
 	$aux = "disabled";
@@ -15,14 +16,13 @@ if(isset($_SESSION["id_usuario"])){
 		
 		$res = $conn->query($sql)->fetchAll();
 
-		if(count($res) > 0) {
+	        if(count($res) > 0) {
 	        foreach ($res as $row) {
 	            $email = $row['email'];
 	            $nome = $row['nome'];
 	            $telefone = $row['telefone'];
 	            $senha = $row['senha'];
-	        }
-	       
+            }	      
     	}	
 	} catch(PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
@@ -36,6 +36,7 @@ else{
 	$senha = "";
 	$aux = "";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
